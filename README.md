@@ -1,43 +1,24 @@
-# python-api-challenge
+# WeatherPy + VacationPy
 
-For this challenge I used a combination of the solutions files we had received from class alongside some perplexity code generation. 
+## Problem
+How do city weather patterns look across random global samples — and where would you actually want to vacation given those conditions?
 
-I created the api_keys.py file and edited it as per previous classes.
+## What we built
+- **WeatherPy**: sample cities, hit OpenWeather, and chart temperature / humidity / cloud / wind relationships
+- **VacationPy**: overlay pleasant-weather picks on GeoViews / Geoapify-style maps and heat layers
 
-The geoviews_demo_solution was helpful in getting the intial container to show.
+Notebooks: `WeatherPy.ipynb`, `VacationPy.ipynb`. Outputs land in `output_data/`.
 
-Prompt 1: [Inserted WeatherPy instructions]
+## How to run
+1. Copy `api_keys.example.py` → `api_keys.py` and add your own OpenWeather + Geoapify keys (never commit real keys).
+2. Install deps and run the notebooks:
+```bash
+pip install citipy matplotlib pandas requests hvplot geoviews jupyter
+jupyter notebook WeatherPy.ipynb
+```
 
+## Stack
+Python · OpenWeather API · citipy · pandas · matplotlib · hvPlot / GeoViews · Jupyter
 
-Realized that it was not running properly due to a DataError regarding citipy.
-Installed via pip install citipy.
-Then "pip install --upgrade citipy" just in case after doing some research online to discover the issue.^2
-
-After I did this I went into complete optimization mode. On every dependency I executed "pip install --upgrade abc"
-
-The variables had issues so I corrected them on my own file.
-Then I recognized that it was not properly overlaying the points on the map.
-
-Prompt 2: [Inserted several code blocks out of geoviews_demo_solution]
-Now the map worked just fine!
-
-From this point I encountered few issues for WeatherPy
-
-Prompts: [Inserting pseudocode from the starter file and facing no significant road blocks]
-
-Final WeatherPy Prompt: [Inserted requirements]
---------------------------------------------------------
-Vacationpy
-Prompt 1: [Inserted VacationPy instructions]
-
-Prompts: [Inserting pseudocode from the starter file and facing no significant road blocks]
-
-Final VacationPy Prompt: [Inserted requirements]
-
-
-Sources / Documentation:
-
-1. Perplexity Link: https://www.perplexity.ai/search/instructions-this-activity-is-ybTNUqygSFKIpUm4g_VPCA
-2. https://stackoverflow.com/questions/52638844/modulenotfounderror-no-module-named-citipy-error
-
- 
+## Fun closer
+Random cities are chaotic good — until the humidity plot tells on the tropics.
